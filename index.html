@@ -1,29 +1,41 @@
-@@ -16,8 +16,8 @@
+<!doctype html>
+
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+  <!-- MATHQUILL GRAVEYARD
+  <link rel="stylesheet" type="text/css" href="mathquill.css">
+  <script src="mathquill.min.js"></script>
+-->
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
 <script src="parser.js"></script>
 <script src="model.js"></script>
 
-<title>Test for equation parser</title>
-<meta name="description" content="Test for equation parser">
 <title>Movement Modeler</title>
 <meta name="description" content="A program that models movement given an equation">
 <meta name="author" content="Tony Zhu">
 
 <!-- <link rel="stylesheet" href=""> -->
-@@ -26,17 +26,27 @@
+
+
 </head>
 
 <body>
   <h1 id="title"> A Movement Modeler </h1>
   <h3 id = "author"> Tony Zhu </h3>
 
-  <!-- <h1>Each pixel represents one "y" unit on its graph (1:1 ratio) so you might have to fiddle with the domains</h1> -->
   <p id = "notes">
   Some notes: <br> <br>
   Each pixel represents one "y" unit on its graph (1:1 ratio) so you might have to fiddle with the domains <br><br>
-  Refresh page to update FPS to a new value (hitting button won't work)
+  Refresh page to update FPS to a new value (hitting button won't work) <br> <br>
+  Formatting and styling is still a WIP, hopefully will make it look nicer in the near future
   </p>
 
-  Equation: <input type = "text" id = "inputEquation" value = "x^2">
   <div id="form">
   Equation: f(x)=<input type = "text" id = "inputEquation" value = "x^2">
   FPS (speed): <input type = "text" id = "inputFPS" value = 30>
@@ -38,3 +50,9 @@
 </div>
 
   <canvas width="500" height="500" id="canvas"></canvas>
+
+</body>
+
+
+
+</html>
