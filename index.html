@@ -2,17 +2,20 @@
 
 <html>
 <head>
+
   <meta charset="UTF-8">
-
-  <link rel="stylesheet" type="text/css" href="mathquill.css">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+  <!-- MATHQUILL GRAVEYARD
+  <link rel="stylesheet" type="text/css" href="mathquill.css">
   <script src="mathquill.min.js"></script>
+  -->
 
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="parser.js"></script>
 
-
-  <title>Test for mathquill</title>
-  <meta name="description" content="Test for mathquill">
+  <title>Test for equation parser</title>
+  <meta name="description" content="Test for equation parser">
   <meta name="author" content="Tony Zhu">
 
   <!-- <link rel="stylesheet" href=""> -->
@@ -22,19 +25,29 @@
 
 <body>
 
-  Math Textbox Test<span id = "txt" class="mathquill-editable">\frac{d}{dx}\sqrt{x}=</span>
+  Math Textbox Test: <input type = "text" id = "inputF">
 
+  <p id = "outputP"></p>
 
-<textarea id = "output">\frac{d}{dx}\sqrt{x}</textarea>
+  <canvas width="500" height="500" id="canvas"></canvas>
 
-  <!-- </span> -->
-  <script>
-
-  var thing = $('#txt').mathquill("latex")
-
-  $("output").var(thing);
-
-  // $("#output").mathquill('latext', thing);
-  </script>
 </body>
+
+<script>
+
+//HOLY FUCK SHIT THIS ACTUALLY WORKS YO
+var input = $('#inputF');
+var output = $("#outputP");
+
+var equation = Parser.parse(input.val());
+
+//what x equals
+var n = 5;
+
+var result = equation.evaluate({x: n});
+
+output.text(result);
+
+</script>
+
 </html>

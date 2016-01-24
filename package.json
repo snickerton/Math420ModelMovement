@@ -1,0 +1,31 @@
+{
+  "name": "idk",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "mathquill-basic.js",
+  "dependencies": {
+    "chai": "^3.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snickerton/Math420ModelMovement.git"
+  },
+  "keywords": [
+    "Math",
+    "Model",
+    "Movement",
+    "Chai",
+    "Node",
+    "Mocha"
+  ],
+  "author": "Tony Zhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snickerton/Math420ModelMovement/issues"
+  },
+  "homepage": "https://github.com/snickerton/Math420ModelMovement#readme"
+}
