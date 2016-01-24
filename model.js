@@ -36,7 +36,7 @@ $(function(){
       sC=0;
 
 
-      output.text("Equation: "+equation.toString()+" FPS: "+FPS);
+      output.text();
 
   });//EOclick
 
@@ -63,8 +63,6 @@ $(function(){
       node = new Object();
 
       //position = stepcount in domain
-
-      console.log("Domain: " + dLower + ", " + dUpper);
 
       if(!showGraph){
         node.x = cWidth/2;
@@ -93,7 +91,7 @@ $(function(){
       ctx.stroke();
 
       sC++;
-      console.log("Position:"+node.x+", "+node.y);
+      outputP.html("Equation: "+equation.toString()+" FPS: "+FPS+"<br/> Position: "+node.x+", "+node.y+" Domain: " + dLower + ", " + dUpper);
 
     }, 1000/FPS)//EOInterval
 
