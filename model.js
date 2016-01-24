@@ -91,7 +91,7 @@ $(function(){
       ctx.stroke();
 
       sC++;
-      output.html("Equation: "+equation.toString()+" FPS: "+FPS+"<br/> Domain: " + dLower + ", " + dUpper+" Position: "+node.x+", "+node.y+" );
+      output.html("Equation: "+equation.toString()+" FPS: "+FPS+"<br/> Domain: " + dLower + ", " + dUpper+" Position: "+node.x+", "+node.y);
 
     }, 1000/FPS)//EOInterval
 
