@@ -9,45 +9,39 @@
   <!-- MATHQUILL GRAVEYARD
   <link rel="stylesheet" type="text/css" href="mathquill.css">
   <script src="mathquill.min.js"></script>
-  -->
+-->
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="parser.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
 
-  <title>Test for equation parser</title>
-  <meta name="description" content="Test for equation parser">
-  <meta name="author" content="Tony Zhu">
+<script src="parser.js"></script>
+<script src="model.js"></script>
 
-  <!-- <link rel="stylesheet" href=""> -->
+<title>Test for equation parser</title>
+<meta name="description" content="Test for equation parser">
+<meta name="author" content="Tony Zhu">
+
+<!-- <link rel="stylesheet" href=""> -->
 
 
 </head>
 
 <body>
 
-  Math Textbox Test: <input type = "text" id = "inputF">
+  <!-- <h1>Each pixel represents one "y" unit on its graph (1:1 ratio) so you might have to fiddle with the domains</h1> -->
 
-  <p id = "outputP"></p>
+  Equation: <input type = "text" id = "inputEquation" value = "x^2">
+  FPS (speed): <input type = "text" id = "inputFPS" value = 30>
+  Domain: <input type = "text" id = "domainLower" value = -15> ≤ x ≤ <input type = "text" id = "domainUpper" value = 15>
+  <input type="checkbox" id="graphCheckbox">Show "Graph"<br>
+  <br>
+  <button id="goBut"> Try Equation </button>
+
+  <p id = "outputP"> Debug Box :D</p>
 
   <canvas width="500" height="500" id="canvas"></canvas>
 
 </body>
 
-<script>
 
-//HOLY FUCK SHIT THIS ACTUALLY WORKS YO
-var input = $('#inputF');
-var output = $("#outputP");
-
-var equation = Parser.parse(input.val());
-
-//what x equals
-var n = 5;
-
-var result = equation.evaluate({x: n});
-
-output.text(result);
-
-</script>
 
 </html>
