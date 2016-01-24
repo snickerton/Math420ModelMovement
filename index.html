@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" type="text/css" href="mathquill.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="mathquill.min.js"></script>
+
+
+
+  <title>Test for mathquill</title>
+  <meta name="description" content="Test for mathquill">
+  <meta name="author" content="Tony Zhu">
+
+  <!-- <link rel="stylesheet" href=""> -->
+
+
+</head>
+
+<body>
+
+  Math Textbox Test<span id = "txt" class="mathquill-editable">\frac{d}{dx}\sqrt{x}=</span>
+
+
+<textarea id = "output">\frac{d}{dx}\sqrt{x}</textarea>
+
+  <!-- </span> -->
+  <script>
+
+  var thing = $('#txt').mathquill("latex")
+
+  $("output").var(thing);
+
+  // $("#output").mathquill('latext', thing);
+  </script>
+</body>
+</html>
